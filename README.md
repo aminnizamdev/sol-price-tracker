@@ -6,6 +6,13 @@
 [![Python](https://img.shields.io/badge/Python-3.6+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![WebSocket](https://img.shields.io/badge/WebSocket-Client-2ea44f?style=for-the-badge&logo=socket.io&logoColor=white)](https://github.com/websocket-client/websocket-client)
 [![Pyth Network](https://img.shields.io/badge/Pyth_Network-Oracle-4A56FF?style=for-the-badge)](https://pyth.network/)
+[![Solana](https://img.shields.io/badge/Solana-Price_Data-9945FF?style=for-the-badge&logo=solana&logoColor=white)](https://solana.com)
+
+<br>
+<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="50" height="50" alt="Python"/></a>&nbsp;
+<a href="https://github.com/websocket-client/websocket-client"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="50" height="50" alt="WebSocket"/></a>&nbsp;
+<a href="https://solana.com"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/solana/solana-original.svg" width="50" height="50" alt="Solana"/></a>&nbsp;
+<a href="https://pyth.network/"><img src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/devicon/devicon-original.svg" width="50" height="50" alt="Pyth Network"/></a>
 
 </div>
 
@@ -53,22 +60,34 @@ SOL Price Tracker is a high-performance, terminal-based application designed for
 <th><div align="center">Details</div></th>
 </tr>
 <tr>
-<td align="center"><b>Python 3.6+</b></td>
+<td align="center">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40"/><br>
+<b>Python 3.6+</b>
+</td>
 <td>Core runtime environment</td>
 <td>Primary programming language with standard libraries for JSON processing and datetime handling <a href="https://www.python.org/">python.org</a></td>
 </tr>
 <tr>
-<td align="center"><b>websocket-client</b></td>
+<td align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" width="40" height="40"/><br>
+<b>websocket-client</b>
+</td>
 <td>WebSocket connectivity</td>
 <td>Reliable WebSocket client library for Python with comprehensive event handling <a href="https://github.com/websocket-client/websocket-client">GitHub</a></td>
 </tr>
 <tr>
-<td align="center"><b>Pyth Network API</b></td>
+<td align="center">
+<img src="https://avatars.githubusercontent.com/u/68587457?s=200&v=4" width="40" height="40"/><br>
+<b>Pyth Network API</b>
+</td>
 <td>Price oracle data source</td>
 <td>Decentralized financial market data provider with low-latency WebSocket feeds <a href="https://docs.pyth.network/">docs.pyth.network</a></td>
 </tr>
 <tr>
-<td align="center"><b>ANSI Terminal</b></td>
+<td align="center">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" width="40" height="40"/><br>
+<b>ANSI Terminal</b>
+</td>
 <td>Visual output formatting</td>
 <td>Color-coded terminal output using ANSI escape sequences for enhanced visualization <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI Reference</a></td>
 </tr>
@@ -293,19 +312,36 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <th width="150">Link</th>
 </tr>
 <tr>
-<td><b>Pyth Network</b></td>
+<td align="center">
+<img src="https://avatars.githubusercontent.com/u/68587457?s=200&v=4" width="40" height="40"/><br>
+<b>Pyth Network</b>
+</td>
 <td>Provider of decentralized financial market data with WebSocket API</td>
 <td><a href="https://pyth.network/">pyth.network</a></td>
 </tr>
 <tr>
-<td><b>websocket-client</b></td>
+<td align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" width="40" height="40"/><br>
+<b>websocket-client</b>
+</td>
 <td>Python WebSocket client library enabling real-time data connection</td>
 <td><a href="https://pypi.org/project/websocket-client/">PyPI</a></td>
 </tr>
 <tr>
-<td><b>Python Software Foundation</b></td>
+<td align="center">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40"/><br>
+<b>Python Software Foundation</b>
+</td>
 <td>Core language and standard libraries for application development</td>
 <td><a href="https://www.python.org/psf/">PSF</a></td>
+</tr>
+<tr>
+<td align="center">
+<img src="https://cryptologos.cc/logos/solana-sol-logo.svg?v=025" width="40" height="40"/><br>
+<b>Solana</b>
+</td>
+<td>Blockchain platform with price feed tracking implementation</td>
+<td><a href="https://solana.com/">solana.com</a></td>
 </tr>
 </table>
 
@@ -334,5 +370,14 @@ SOL Price Tracker demonstrates the implementation of a high-performance financia
 
 <div align="center">
 <hr>
+<br>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40"/>
+&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" width="40" height="40"/>
+&nbsp;&nbsp;
+<img src="https://cryptologos.cc/logos/solana-sol-logo.svg?v=025" width="40" height="40"/>
+&nbsp;&nbsp;
+<img src="https://avatars.githubusercontent.com/u/68587457?s=200&v=4" width="40" height="40"/>
+<br><br>
 <p>SOL Price Tracker | WebSocket-Based Price Oracle | MIT Licensed</p>
 </div>
