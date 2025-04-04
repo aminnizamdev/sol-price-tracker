@@ -3,9 +3,9 @@
 <div align="center">
   
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/Python-3.6+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.6+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![WebSocket](https://img.shields.io/badge/WebSocket-Client-2ea44f?style=for-the-badge&logo=socket.io&logoColor=white)](https://github.com/websocket-client/websocket-client)
-[![Pyth Network](https://img.shields.io/badge/Pyth_Network-Oracle-4A56FF?style=for-the-badge)](https://pyth.network/)
+[![Pyth Network](https://img.shields.io/badge/Pyth_Network-Oracle-4d276c?style=for-the-badge)](https://pyth.network/)
 [![Solana](https://img.shields.io/badge/Solana-Price_Data-9945FF?style=for-the-badge&logo=solana&logoColor=white)](https://solana.com)
 
 <br>
@@ -379,5 +379,6 @@ SOL Price Tracker demonstrates the implementation of a high-performance financia
 &nbsp;&nbsp;
 <img src="https://avatars.githubusercontent.com/u/68587457?s=200&v=4" width="40" height="40"/>
 <br><br>
+<p>Built with passion by <a href="https://github.com/aminnizamdev">@aminnizamdev</a> — powered by the Pyth Network</p>
 <p>SOL Price Tracker | WebSocket-Based Price Oracle | MIT Licensed</p>
 </div>
