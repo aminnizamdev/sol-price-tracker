@@ -1,8 +1,19 @@
 # SOL Price Tracker
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
-[![WebSocket Client](https://img.shields.io/badge/WebSocket-Client-2ea44f)](https://github.com/websocket-client/websocket-client)
+<div align="center">
+  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.6+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![WebSocket](https://img.shields.io/badge/WebSocket-Client-2ea44f?style=for-the-badge&logo=socket.io&logoColor=white)](https://github.com/websocket-client/websocket-client)
+[![Pyth Network](https://img.shields.io/badge/Pyth_Network-Oracle-4A56FF?style=for-the-badge)](https://pyth.network/)
+
+</div>
+
+<div align="center">
+<h3>High-performance terminal-based price oracle for real-time Solana price monitoring</h3>
+</div>
+
+<hr>
 
 ## Overview
 
@@ -10,23 +21,58 @@ SOL Price Tracker is a high-performance, terminal-based application designed for
 
 ## Technical Architecture
 
-The application implements a WebSocket client that connects to Pyth Network's price oracle infrastructure. It leverages the following technical components:
-
-| Component | Description |
-|-----------|-------------|
-| Data Source | Pyth Network Hermes WebSocket API endpoint |
-| Data Processing | Real-time JSON parsing and numerical transformations |
-| Display Logic | Terminal-optimized visualization with ANSI color coding |
-| Updates Management | Conditional refresh based on configurable price delta thresholds |
+<table>
+<tr>
+<th width="180">Component</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><b>Data Source</b></td>
+<td>Pyth Network Hermes WebSocket API endpoint</td>
+</tr>
+<tr>
+<td><b>Data Processing</b></td>
+<td>Real-time JSON parsing and numerical transformations</td>
+</tr>
+<tr>
+<td><b>Display Logic</b></td>
+<td>Terminal-optimized visualization with ANSI color coding</td>
+</tr>
+<tr>
+<td><b>Updates Management</b></td>
+<td>Conditional refresh based on configurable price delta thresholds</td>
+</tr>
+</table>
 
 ## Core Technologies
 
-| Technology | Purpose | Source |
-|------------|---------|--------|
-| Python 3.6+ | Core runtime environment | [python.org](https://www.python.org/) |
-| websocket-client | WebSocket connectivity | [GitHub](https://github.com/websocket-client/websocket-client) |
-| Pyth Network API | Price oracle data source | [docs.pyth.network](https://docs.pyth.network/) |
-| ANSI Terminal | Visual output formatting | [ANSI Reference](https://en.wikipedia.org/wiki/ANSI_escape_code) |
+<table>
+<tr>
+<th width="180"><div align="center">Technology</div></th>
+<th width="180"><div align="center">Purpose</div></th>
+<th><div align="center">Details</div></th>
+</tr>
+<tr>
+<td align="center"><b>Python 3.6+</b></td>
+<td>Core runtime environment</td>
+<td>Primary programming language with standard libraries for JSON processing and datetime handling <a href="https://www.python.org/">python.org</a></td>
+</tr>
+<tr>
+<td align="center"><b>websocket-client</b></td>
+<td>WebSocket connectivity</td>
+<td>Reliable WebSocket client library for Python with comprehensive event handling <a href="https://github.com/websocket-client/websocket-client">GitHub</a></td>
+</tr>
+<tr>
+<td align="center"><b>Pyth Network API</b></td>
+<td>Price oracle data source</td>
+<td>Decentralized financial market data provider with low-latency WebSocket feeds <a href="https://docs.pyth.network/">docs.pyth.network</a></td>
+</tr>
+<tr>
+<td align="center"><b>ANSI Terminal</b></td>
+<td>Visual output formatting</td>
+<td>Color-coded terminal output using ANSI escape sequences for enhanced visualization <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI Reference</a></td>
+</tr>
+</table>
 
 ## Technical Specifications
 
@@ -48,13 +94,42 @@ SOL_FEED_ID = "0xef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56
 
 ### Data Processing Pipeline
 
-1. **Subscription Initialization**: On connection, the client subscribes to the SOL price feed
-2. **Message Processing**: Incoming WebSocket messages are parsed from JSON format
-3. **Price Extraction**: Price, exponent, confidence and timestamp values are extracted
-4. **Numerical Transformation**: Raw integer values are converted using the provided exponent
-5. **Delta Calculation**: Price changes are computed against previous values
-6. **Threshold Filtering**: Updates are displayed only when meeting configurable thresholds (currently 0.001)
-7. **Visual Formatting**: Output is formatted with directional indicators and magnitude representations
+<details>
+<summary><b>Expand to view the data flow architecture</b></summary>
+
+1. **Subscription Initialization**
+   - Client connects to WebSocket endpoint
+   - Subscription message sent with SOL feed ID
+   - Connection established with Pyth Network oracle
+
+2. **Message Processing**
+   - WebSocket messages received as JSON payloads
+   - Message type validation and filtering
+   - JSON parsing and data extraction
+
+3. **Price Data Extraction**
+   - Raw price integer retrieval
+   - Exponent application
+   - Confidence interval calculation
+   - Timestamp conversion to UTC
+
+4. **Delta Calculation Logic**
+   - Previous price state maintenance
+   - Current vs previous price comparison
+   - Directional change determination
+   - Magnitude calculation for visual indicators
+
+5. **Threshold-Based Display Logic**
+   - Configurable update threshold (0.001)
+   - Conditional output based on price delta
+   - Optimization to reduce noise in output
+
+6. **Visual Formatting**
+   - ANSI color application (green/red)
+   - Directional indicators (▲/▼)
+   - Magnitude visualization via bar count
+   - Precision-controlled decimal formatting
+</details>
 
 ### Sample Output
 
@@ -69,9 +144,11 @@ SOL/USD | $  123.4321 ± 0.0124 | 13:45:30 UTC | ▼||| | Change: -0.0468
 
 ### System Requirements
 
-- Python 3.6 or higher
-- Network connectivity to Pyth Network endpoints
-- Terminal with ANSI color support
+<table>
+<tr><td width="200"><b>Python 3.6+</b></td><td>Required for core application execution</td></tr>
+<tr><td><b>Network Connectivity</b></td><td>Access to Pyth Network endpoints</td></tr>
+<tr><td><b>Terminal</b></td><td>ANSI color support required for visual indicators</td></tr>
+</table>
 
 ### Dependency Installation
 
@@ -130,16 +207,42 @@ CYAN = '\033[96m'   # Color for neutral/info
 
 The application implements comprehensive error handling strategies:
 
+```python
+def on_error(ws, error):
+    print(f"{RED}❌ WebSocket Error:{RESET} {error}")
+
+def on_close(ws, close_status_code, close_msg):
+    print(f"{RED}Connection closed:{RESET} {close_status_code} - {close_msg}")
+```
+
 - WebSocket connection errors are captured and displayed
 - Message parsing exceptions are trapped and reported
 - Connection closure events are logged with status codes
 
 ## Performance Considerations
 
-- Minimal CPU and memory footprint
-- No external dependencies beyond the websocket-client library
-- Efficient data processing with conditional updates
-- Optimized for long-running terminal sessions
+<table>
+<tr>
+<th>Aspect</th>
+<th>Implementation</th>
+</tr>
+<tr>
+<td><b>Memory Usage</b></td>
+<td>Minimal memory footprint with efficient state tracking</td>
+</tr>
+<tr>
+<td><b>CPU Utilization</b></td>
+<td>Event-driven approach reduces CPU overhead</td>
+</tr>
+<tr>
+<td><b>Network Efficiency</b></td>
+<td>WebSocket connection maintenance with minimal reconnect logic</td>
+</tr>
+<tr>
+<td><b>Update Optimization</b></td>
+<td>Threshold-based updates reduce unnecessary terminal output</td>
+</tr>
+</table>
 
 ## Implementation Details
 
@@ -151,13 +254,27 @@ def on_message(ws, message):
     try:
         data = json.loads(message)
         if data.get("type") == "price_update" and "price_feed" in data:
-            # Price data extraction and processing
-            # ...
+            price_feed = data["price_feed"]
+            price_data = price_feed["price"]
             
+            # Extract price, exponent, timestamp, and confidence
+            price = int(price_data["price"])
+            expo = int(price_data["expo"])
+            publish_time = price_data["publish_time"]
+            conf = int(price_data["conf"])
+            
+            # Convert to real values
+            real_price = price * (10 ** expo)
+            real_conf = conf * (10 ** expo)
+            
+            # Visual trend indicator calculation
+            if last_price is not None:
+                price_change = real_price - last_price
+                # Direction and magnitude visualization logic
+                
             # Display update when threshold is met
             if last_price is None or abs(real_price - last_price) >= 0.001:
                 # Format and display the price information
-                # ...
                 last_price = real_price
     except Exception as e:
         print(f"{RED}❌ Error:{RESET} {e}")
@@ -169,18 +286,53 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Credits & Acknowledgments
 
-- **Pyth Network** - Provider of decentralized financial market data ([pyth.network](https://pyth.network/))
-- **websocket-client** - Python WebSocket client library ([PyPI](https://pypi.org/project/websocket-client/))
-- **Python Software Foundation** - Core language and standard libraries ([PSF](https://www.python.org/psf/))
+<table>
+<tr>
+<th width="200">Project</th>
+<th>Contribution</th>
+<th width="150">Link</th>
+</tr>
+<tr>
+<td><b>Pyth Network</b></td>
+<td>Provider of decentralized financial market data with WebSocket API</td>
+<td><a href="https://pyth.network/">pyth.network</a></td>
+</tr>
+<tr>
+<td><b>websocket-client</b></td>
+<td>Python WebSocket client library enabling real-time data connection</td>
+<td><a href="https://pypi.org/project/websocket-client/">PyPI</a></td>
+</tr>
+<tr>
+<td><b>Python Software Foundation</b></td>
+<td>Core language and standard libraries for application development</td>
+<td><a href="https://www.python.org/psf/">PSF</a></td>
+</tr>
+</table>
 
 ## Contact Information
 
-- **Developer**: Amin Nizam
-- **GitHub**: [@aminnizamdev](https://github.com/aminnizamdev)
-- **Repository**: [sol-price-tracker](https://github.com/aminnizamdev/sol-price-tracker)
+<table>
+<tr>
+<td width="120"><b>Developer</b></td>
+<td>Amin Nizam</td>
+</tr>
+<tr>
+<td><b>GitHub</b></td>
+<td><a href="https://github.com/aminnizamdev">@aminnizamdev</a></td>
+</tr>
+<tr>
+<td><b>Repository</b></td>
+<td><a href="https://github.com/aminnizamdev/sol-price-tracker">sol-price-tracker</a></td>
+</tr>
+</table>
 
 ---
 
 ## About this Project
 
 SOL Price Tracker demonstrates the implementation of a high-performance financial data monitoring tool using WebSocket technology and the Pyth Network oracle. The application is designed with a focus on reliability, performance, and developer experience.
+
+<div align="center">
+<hr>
+<p>SOL Price Tracker | WebSocket-Based Price Oracle | MIT Licensed</p>
+</div>
